@@ -14,7 +14,7 @@ a {
   margin: 0 0.25em;
   color: var(--color-grey-dark);
   border-bottom: 0.1em solid var(--color-blue);
-  transition: color, 0.2s ease;
+  transition: color 3s ease;
   &:hover {
     color: var(--color-blue);
   }
@@ -51,11 +51,11 @@ label {
 article {
   padding-top: 8em;
   color: var(--color-grey-light);
-  transition: color 0.3s ease;
+  transition: color 3s ease;
   a {
     color: var(--color-grey-light);
     &:hover {
-      color: var(--color-grey);
+      color: var(--color-blue);
     }
   }
 }

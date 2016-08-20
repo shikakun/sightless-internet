@@ -1,0 +1,102 @@
+@import 'styles/normalize';
+@import 'styles/reset';
+@import 'styles/color';
+@import 'styles/media';
+@import 'styles/typography';
+
+body {
+  padding: 2em;
+  color: var(--color-grey-dark);
+  background-color: var(--color-grey-light);
+}
+
+a {
+  margin: 0 0.25em;
+  color: var(--color-grey-dark);
+  border-bottom: 0.1em solid var(--color-blue);
+  transition: color, 0.2s ease;
+  &:hover {
+    color: var(--color-blue);
+  }
+}
+
+::selection {
+  color: var(--color-grey-light);
+  background-color: var(--color-grey);
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+label {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  display: block;
+  cursor: pointer;
+  &::before {
+    content: '😳';
+    margin-right: 0.25em;
+  }
+  &::after {
+    content: 'あける';
+  }
+}
+
+article {
+  padding-top: 8em;
+  color: var(--color-grey-light);
+  transition: color 0.3s ease;
+  a {
+    color: var(--color-grey-light);
+    &:hover {
+      color: var(--color-grey);
+    }
+  }
+}
+
+ol,
+ul {
+  margin: 2em;
+}
+
+li {
+  margin: 1em 0;
+}
+
+aside {
+  margin-top: 4em;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  &:checked {
+    + label {
+      &::before {
+        content: '😎';
+      }
+      &::after {
+        content: 'つむる';
+      }
+    }
+    ~ article {
+      color: var(--color-grey-dark);
+      a {
+        color: var(--color-grey-dark);
+        &:hover {
+          color: var(--color-blue);
+        }
+      }
+    }
+  }
+}
